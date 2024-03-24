@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 4</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400&display=swap"
+      rel="stylesheet"
+    >
+  </head>
+  <body>
+    <section class="showcase">
+      <div class="loader-container">
+        <div class="loader"></div>
+      </div>
+      <div class="nav-menu">
+        <nav>
+          <ion-icon class="menu-img" name="menu-outline"></ion-icon>
+          <ul class="nav-links">
+            <li>
+              <a
+                id="git"
+                href="https://www.youtube.com/watch?v=Rj1t8UwPR9o"
+                target="_blank"
+                >YouTube</a
+              >
+            </li>
+            <li><a id="menu-chapter">Cake:</a></li>
+            <li><a id="cake-category" href="#s2">Milky Way</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="video-container">
+        <video
+          class="video"
+          src="videos/video1.mov"
+          autoplay
+          muted
+          loop
+        ></video>
+      </div>
+      <div class="content">
+        <h1 class="title">PRZEPISY KULINARNE</h1>
+      </div>
+      <div class="scrolldown">
+        <a href="#s2">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      </div>
+    </section>
+
+    <section class="s2" id="s2">
+      <div class="cake-recipes">
+        <h1>
+          Ciasto mleczna kanapka <span class="multicolor">(Milky Way)</span>
+        </h1>
+      </div>
+      <div class="recipe">
+        <div class="cake_ingredients">
+          <div class="cake-img-class">
+            <img
+              class="cake-img"
+              id="space-img"
+              src="https://s3.przepisy.pl/przepisy3ii/img/variants/800x0/mleczna-kanapka33140427.jpg"
+              alt=""
+            >
+          </div>
+          <div class="ingredients" id="space-ingredients">
+            <h3>Skladniki</h3>
+            <ul>
+              <li>jajka - 3 sztuki</li>
+              <li>cukier - 100 gramów</li>
+              <li>olej - 2 łyżki</li>
+              <li>mąka pszenna - 50 gramów</li>
+              <li>kakao - 15 gramów</li>
+              <li>proszek do pieczenia - 0.5 łyżeczki</li>
+              <li>Kostka do pieczenia Kasia - 125 gramów</li>
+              <li>mleko - 0.25 szklanki</li>
+              <li>cukier - 0.25 szklanki</li>
+              <li>mleko w proszku - 120 gramów</li>
+              <li>serek śmietankowy (np. Bieluch) - 100 gramów</li>
+              <li>czekolada mleczna - 100 gramów</li>
+              <li>mleko - 2 łyżki</li>
+              <li>Kostka do pieczenia Kasia - 0.1 opakowania</li>
+            </ul>
+          </div>
+        </div>
+        <div class="preparation">
+          <h3>Przygotowanie</h3>
+          <p>
+            Białka oddzielić od żółtek i ubić z cukrem na sztywną pianę. Ciągle
+            ubijając, dodać do piany żółtka. Następnie dodać sok z cytryny, olej
+            i dalej ubijać. Mąkę wymieszać z kakao, proszkiem do pieczenia,
+            przesiać i delikatnie połączyć z masą jajeczną. Ciasto wylać na dno
+            wyłożonej papierem do pieczenia formy o wymiarach 20 x 20 cm. Piec w
+            temp. 180 stopni przez około 30 minut. Wyjąć z formy i odwrócić do
+            góry dnem. Mleko zagotować z cukrem i wystudzić. Miękką Kasię utrzeć
+            na krem. Ciągle ucierając, wlewać cienkim strumieniem mleko z
+            cukrem. Następnie dodawać małymi porcjami mleko w proszku i serek.
+            Cały czas ucierać. Upieczone i wystudzone ciasto przeciąć na dwa
+            placki i przełożyć kremem. Lekko docisnąć. Czekoladę, mleko i Kasię
+            roztopić w kąpieli wodnej. Otrzymaną masą polać wierzch ciasta i
+            odstawić do zastygnięcia.
+          </p>
+        </div>
+      </div>
+    </section>
+    <script js>
+      $(window).on("load", function () {
+      $(".loader-container").fadeOut(1000);
+      });
+
+      const nav_links_div = document.querySelector(".nav-links"),
+        menu_img_div = document.querySelector(".menu-img");
+
+      menu_img_div.addEventListener("click", () => {
+        if (nav_links_div.style.display === "") {
+          nav_links_div.style.setProperty("display", "flex");
+          menu_img_div.style.setProperty("color", "rgb(75, 75, 66)");
+        } else {
+          nav_links_div.style.setProperty("display", "");
+          menu_img_div.style.setProperty("color", "");
+        }
+      });
+    </script>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+  </body>
+</html>
